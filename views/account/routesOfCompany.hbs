@@ -1,0 +1,26 @@
+<div class="routes-of-company">
+  {{#if routes}}
+    {{#each routes}}
+      {{>oneroute}}
+    {{/each}}
+  {{else}}
+    <h2>Для данной компании маршруты не найдены</h2>
+  {{/if}}
+</div>
+
+<form action="/api/v1/company/{{id}}/route" method="POST" name="addRoute" class="add-route">
+<input type="hidden" name="id" value="{{id}}">
+<select name="from_city_id">
+  {{#each cities}}
+  <option value="{{id}}">{{name}}</option>
+  {{/each}}
+</select>
+
+<select name="to_city_id">
+  {{#each cities}}
+  <option value="{{id}}">{{name}}</option>
+  {{/each}}
+</select>
+<button type="submit">Добавить маршрут</button>
+<div class="result_area"></div>
+</form>

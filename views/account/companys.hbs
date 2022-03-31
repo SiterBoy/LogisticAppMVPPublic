@@ -1,0 +1,40 @@
+{{#if companys}}
+  <ul class="companys_ul">
+  <li class="company_ul__li">
+  <div class="company_ul__title bold-style">
+   Название компании
+  </div>
+
+  <div class="company_ul__description bold-style">
+    Описание компании
+  </div>
+
+  <div class="company_ul__inn bold-style">
+    Инн
+  </div>
+
+  <div class="company_ul__phone bold-style">
+    Телефон
+  </div>
+
+  <div class="company_ul__controls bold-style">
+    Управление
+  </div>
+</li>
+  {{#each companys}}
+    {{> onecompany}}
+  {{/each}}
+  </ul>
+{{else}}
+  <h2>Компаний в базе нет. Вы можете добавить их</h2>
+  <ul class="companys_ul"></ul>
+{{/if}}
+
+<form action="/api/v1/company" method="POST" name="addCompany" class="companys-form">
+  <input type="text" name="name" placeholder="Название компании">
+  <textarea name="description" placeholder="Описание компании"></textarea>
+  <input type="number" name="inn" placeholder="inn">
+  <input type="text" name="phone" placeholder="phone">
+  <button type="submit">Добавить компанию</button>
+  <div class="result_area"></div>
+</form>

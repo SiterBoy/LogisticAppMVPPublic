@@ -1,0 +1,16 @@
+{{#if cities}}
+  <ul class="cities_ul">
+  {{#each cities}}
+    {{> onecity}}
+  {{/each}}
+  </ul>
+{{else}}
+  <h2>Городов в базе нет. Вы можете добавить их</h2>
+  <ul class="cities_ul"></ul>
+{{/if}}
+
+<form action="/api/v1/city" method="POST" class="form-add-cities" name="addCity">
+  <input type="text" name="name" placeholder="Название города">
+  <button type="submit">Добавить</button>
+  <div class="result_area"></div>
+</form>

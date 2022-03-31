@@ -1,0 +1,18 @@
+<div class="yamap">
+  <div id="map"></div>
+</div>
+
+  <div class="mapscontrols">
+    <button class="generate_map">Отобразить маршруты</button>
+    <button class="delete_map">Закрыть карту</button>
+  </div>
+
+<form action="/api/v1/routes-main" method="GET" name="mainForm">
+<div class="main-control-panel">
+  {{> fromblock}}
+
+  {{> centerblock}}
+
+  {{> toblock}}
+  </form>
+</div>

@@ -1,0 +1,15 @@
+<div class="routes-of-company__one-routre">
+  <div class="routes-of-company__compname">
+    {{this.[Company.name]}}
+  </div>
+  <div class="routes-of-company__fromname">
+    {{this.[cityFrom.name]}}
+  </div>
+  <div class="routes-of-company__toname">
+    {{this.[cityTo.name]}}
+  </div>
+  <div class="routes-of-company__controls">
+    <a class="delete-routes-of-company routes-of-company_ul__control" href="/api/v1/route/{{this.id}}">Удалить</a>
+  </div>
+        
+</div>

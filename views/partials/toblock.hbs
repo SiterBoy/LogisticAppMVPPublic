@@ -1,0 +1,10 @@
+<div class="toblock">
+    <div class="blocktitle">Точка прибытия</div>
+    <div class="to-block-cities">
+      <ul class="to-block-cities__ul">
+      {{#each citiesTo}}
+        <li>{{name}} <input type="radio" class="main-form-input" name="toCity" value="{{id}}"></li>
+      {{/each}}
+      </ul>
+    </div>
+  </div>

@@ -1,0 +1,14 @@
+<div class="centerblock">
+    <div class="blocktitle">Название компании</div>
+
+    <div class="company-info"></div>
+
+    <div class="companysblock">
+      
+      <ul class="companies-block__ul">
+      {{#each companies}}
+       <li>{{name}} <input type="radio" {{#if checked}} checked {{/if}}class="main-form-input" name="company" value="{{id}}"></li>
+      {{/each}}
+      </ul>
+    </div>
+  </div>

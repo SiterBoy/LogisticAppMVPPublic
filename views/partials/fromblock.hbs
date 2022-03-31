@@ -1,0 +1,10 @@
+<div class="fromblock">
+    <div class="blocktitle">Точка отправления</div>
+    <div class="from-block-cities">
+      <ul class="from-block-cities__ul">
+      {{#each citiesFrom}}
+        <li>{{name}} <input type="radio" class="main-form-input" name="fromCity" value="{{id}}"></li>
+      {{/each}}
+      </ul>
+    </div>
+  </div>

@@ -1,0 +1,17 @@
+<div class="header">
+  <div class="header__logo"><a href="/">Logistic App</a></div>
+
+  <nav class="header__menu">
+    <ul>
+      <li><a href="/">Главная</a></li>
+      {{#if login}}
+        <li><a href="/account/cities">Города</a></li>
+        <li><a href="/account/companys">Компании</a></li>
+        <li><a href="/user/logout">Выйти</a></li>
+      {{else}}
+        <li><a href="/login"> Войти</a></li>
+        <li><a href="/registration"> Регистрация</a></li>
+      {{/if}}
+    </ul>
+  </nav>
+</div>

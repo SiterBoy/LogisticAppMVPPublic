@@ -1,0 +1,23 @@
+<li class="company_ul__li">
+  <div class="company_ul__title">
+    {{name}}
+  </div>
+
+  <div class="company_ul__description">
+    {{description}}
+  </div>
+
+  <div class="company_ul__inn">
+    {{inn}}
+  </div>
+
+  <div class="company_ul__phone">
+    {{phone}}
+  </div>
+
+  <div class="company_ul__controls">
+    <a class="routes-company-js company_ul__control" href="/api/v1/company/{{id}}/routes">Маршруты</a>
+    <a class="delete-company-js company_ul__control" href="/api/v1/company/{{id}}">Удалить</a>
+    <a class="update-company-js company_ul__control" href="/api/v1/company/{{id}}">Изменить</a>
+  </div>
+</li>
